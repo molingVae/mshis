@@ -24,7 +24,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.lcp.medicalSystem.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.mshis.medicalSystem.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

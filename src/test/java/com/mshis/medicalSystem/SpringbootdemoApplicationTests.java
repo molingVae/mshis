@@ -1,4 +1,4 @@
-package com.lcp.medicalSystem;
+package com.mshis.medicalSystem;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

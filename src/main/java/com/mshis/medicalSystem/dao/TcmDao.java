@@ -1,6 +1,6 @@
-package com.lcp.medicalSystem.dao;
+package com.mshis.medicalSystem.dao;
 
-import com.lcp.medicalSystem.pojo.Tcm;
+import com.mshis.medicalSystem.pojo.Tcm;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

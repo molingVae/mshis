@@ -1,7 +1,7 @@
-package com.lcp.medicalSystem.config;
+package com.mshis.medicalSystem.config;
 
-import com.lcp.medicalSystem.pojo.Code;
-import com.lcp.medicalSystem.pojo.Result;
+import com.mshis.medicalSystem.pojo.Code;
+import com.mshis.medicalSystem.pojo.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

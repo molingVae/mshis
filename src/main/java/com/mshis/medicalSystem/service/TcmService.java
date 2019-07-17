@@ -1,6 +1,6 @@
-package com.lcp.medicalSystem.service;
+package com.mshis.medicalSystem.service;
 
-import com.lcp.medicalSystem.pojo.Result;
+import com.mshis.medicalSystem.pojo.Result;
 
 /**
  * description:

@@ -1,4 +1,4 @@
-package com.lcp.medicalSystem.config;
+package com.mshis.medicalSystem.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

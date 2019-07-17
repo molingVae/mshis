@@ -1,4 +1,4 @@
-package com.lcp.medicalSystem.config;
+package com.mshis.medicalSystem.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;

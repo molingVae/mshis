@@ -1,7 +1,7 @@
-package com.lcp.medicalSystem.controller;
+package com.mshis.medicalSystem.controller;
 
-import com.lcp.medicalSystem.pojo.Result;
-import com.lcp.medicalSystem.service.TcmService;
+import com.mshis.medicalSystem.pojo.Result;
+import com.mshis.medicalSystem.service.TcmService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;

@@ -1,4 +1,4 @@
-package com.lcp.medicalSystem.pojo;
+package com.mshis.medicalSystem.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

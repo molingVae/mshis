@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * description:
- * author: ĭ��
+ * description: 疾病诊断国际（ICD-9）编码表
+ * author: 沫凌
  * create: 2019-07-14 9:10
  */
 @Entity
@@ -17,7 +17,7 @@ public class Diagnose implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id;//id
 
     private String diseaseIcd9; //ICD-9编码
 

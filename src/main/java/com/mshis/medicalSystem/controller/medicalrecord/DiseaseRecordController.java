@@ -1,8 +1,8 @@
 package com.mshis.medicalSystem.controller.medicalrecord;
 
 import com.mshis.medicalSystem.pojo.Result;
-import com.mshis.medicalSystem.pojo.bean.FirstPage;
-import com.mshis.medicalSystem.service.medicalrecord.MedicalRecordService;
+import com.mshis.medicalSystem.pojo.bean.CaseHistory;
+import com.mshis.medicalSystem.service.medicalrecord.DiseaseRecordService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -10,31 +10,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * description: 病案 controller
+ * description:病历
  * author: 沫凌
- * create: 2019-07-18 9:47
+ * create: 2019-07-18 10:03
  */
-
 @RestController
-@RequestMapping("/medical-record")
+@RequestMapping("/disease-record")
 @CrossOrigin
-@Api(description = "病案")
-public class MedicalRecordController {
+@Api(description = "病历")
+public class DiseaseRecordController {
 
     @Autowired
-    private MedicalRecordService medicalRecordService;
+    private DiseaseRecordService diseaseRecordService;
 
     @ApiOperation(value = "查询")
     @GetMapping("/query")
     public Result query(){
-        return medicalRecordService.query();
+        return diseaseRecordService.query();
     }
 
     @ApiOperation(value = "录入")
-    @ApiImplicitParam(name = "firstPage",value = "病案")
+    @ApiImplicitParam(name = "caseHistory",value = "病历")
     @PostMapping("/add")
-    public Result add(FirstPage firstPage){
-        return medicalRecordService.add(firstPage);
+    public Result add(CaseHistory caseHistory){
+        return diseaseRecordService.add(caseHistory);
 
     }
 
@@ -42,6 +41,6 @@ public class MedicalRecordController {
     @ApiImplicitParam(name = "id",value = "病案号(YYYY9999)")
     @DeleteMapping("/delete")
     public Result delete(Integer id){
-        return medicalRecordService.delete(id);
+        return diseaseRecordService.delete(id);
     }
 }

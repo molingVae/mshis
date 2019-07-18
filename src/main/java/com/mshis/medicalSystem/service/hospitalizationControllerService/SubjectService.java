@@ -30,7 +30,7 @@ public class SubjectService {
      * @return
      */
     public Result addSubject(Subject subject){
-        subjectDao.save(subjectDao);
+        subjectDao.save(subject);
         Result result = new Result(Code.OK, "添加成功");
         return result;
     }
@@ -41,7 +41,7 @@ public class SubjectService {
      * @return
      */
     public Result updateSubject(Subject subject){
-        subjectDao.save(subjectDao);
+        subjectDao.save(subject);
         Result result = new Result(Code.OK, "修改成功");
         return result;
     }
@@ -51,7 +51,7 @@ public class SubjectService {
      * @return
      */
     public Result getAllSubject(){
-        List<SubjectDao> all = subjectDao.findAll();
+        List<Subject> all = subjectDao.findAll();
         Result result = new Result(Code.OK, "修改成功",all );
         return result;
     }

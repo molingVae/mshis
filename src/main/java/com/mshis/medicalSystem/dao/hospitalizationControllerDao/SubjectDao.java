@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.dao.hospitalizationControllerDao;
 
+import com.mshis.medicalSystem.pojo.bean.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 
@@ -9,5 +10,5 @@ import org.springframework.stereotype.Component;
  * create:  2019/7/18 13:22
  */
 @Component
-public interface SubjectDao extends JpaRepository<SubjectDao, Integer> {
+public interface SubjectDao extends JpaRepository<Subject, Integer> {
 }

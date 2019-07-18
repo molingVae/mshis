@@ -10,9 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringbootdemoApplicationTests {
 
-    @Autowired
-    private TcmDao tcmDao;
-
     @Test
     public void contextLoads() {
     }
@@ -20,9 +17,6 @@ public class SpringbootdemoApplicationTests {
 
     @Test
     public void  test1(){
-
-        System.out.println(tcmDao.findTcmsByIdAndAlias(1, null));
-
 
     }
 

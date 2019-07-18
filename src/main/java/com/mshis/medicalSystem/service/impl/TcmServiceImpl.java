@@ -1,9 +1,11 @@
 package com.mshis.medicalSystem.service.impl;
 
+import com.mshis.medicalSystem.dao.TcmDao;
 import com.mshis.medicalSystem.pojo.Code;
 import com.mshis.medicalSystem.pojo.PageInfo;
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.Tcm;
+import com.mshis.medicalSystem.service.TcmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

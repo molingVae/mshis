@@ -5,7 +5,11 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ * description: 家庭主要成员与社会关系
+ * author: 沫凌
+ * create: 2019-07-14 9:10
+ */
 @Entity
 @Table(name="familyMember")
 @Data

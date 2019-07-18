@@ -6,9 +6,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 /**
- * 病案
- * @author Administrator
- *
+ * description: 病案
+ * author: 沫凌
+ * create: 2019-07-14 9:10
  */
 @Entity
 @Table(name = "firstPage")

@@ -5,11 +5,10 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-
 /**
- * 人事基本资料表
- *
- * @author Administrator
+ * description: 人事基本资料
+ * author: 沫凌
+ * create: 2019-07-14 9:10
  */
 @Entity
 @Table(name = "personBase")
@@ -18,9 +17,9 @@ public class PersonBase implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer SectionNo;    //	科室编号
+    private Integer PersonNo;    //	职工编号
 
-    private String PersonNo;    //	职工编号
+    private Integer SectionNo;    //	科室编号
     private String SpellNo;    //	拼音码
     private String PersonName;    //	姓名
     private String AnotherNo;    //	曾用名

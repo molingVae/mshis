@@ -6,9 +6,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
- * 病历表
- *
- * @author Administrator
+ * description: 病例
+ * author: 沫凌
+ * create: 2019-07-14 9:10
  */
 @Entity
 @Table(name = "caseHistory")

@@ -7,11 +7,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 手术情况表
- *
- * @author Administrator
+ * description: 手术情况
+ * author: 沫凌
+ * create: 2019-07-14 9:10
  */
-
 @Entity
 @Table(name = "operation")
 @Data

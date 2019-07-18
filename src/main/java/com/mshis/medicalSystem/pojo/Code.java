@@ -1,6 +1,9 @@
 package com.mshis.medicalSystem.pojo;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.Entity;
 
 /**
  * description:
@@ -8,6 +11,7 @@ import lombok.Data;
  * create: 2019-07-15 20:51
  */
 @Data
+@Component
 public class Code {
     public static final int OK = 2000;
     public static final int ERROR =2001;

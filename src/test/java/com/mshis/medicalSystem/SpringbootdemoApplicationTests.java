@@ -23,8 +23,5 @@ public class SpringbootdemoApplicationTests {
     @Test
     public void  test2(){
 
-//        System.out.println(tcmDao.findTcmsByIdOrAlias(1, "1"));
-//    tcmDao.getTCMMMMMByid(1).
-
     }
 }

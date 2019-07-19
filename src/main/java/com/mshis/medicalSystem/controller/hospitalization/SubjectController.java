@@ -1,8 +1,8 @@
-package com.mshis.medicalSystem.controller.hospitalizationController;
+package com.mshis.medicalSystem.controller.hospitalization;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Subject;
-import com.mshis.medicalSystem.service.hospitalizationControllerService.SubjectService;
+import com.mshis.medicalSystem.service.hospitalization.SubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

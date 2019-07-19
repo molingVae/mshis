@@ -1,8 +1,8 @@
-package com.mshis.medicalSystem.controller.hospitalizationController;
+package com.mshis.medicalSystem.controller.hospitalization;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Uh03MonthBalance;
-import com.mshis.medicalSystem.service.hospitalizationControllerService.MonthBalanceService;
+import com.mshis.medicalSystem.service.hospitalization.MonthBalanceService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

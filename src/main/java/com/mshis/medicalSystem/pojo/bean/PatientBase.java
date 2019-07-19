@@ -1,15 +1,19 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-//入院病人基本资料登记表
+//入院病人基本资料登记表 27
 @Entity
 @Table(name = "patientBase")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PatientBase implements Serializable {
 
     @Id
@@ -42,4 +46,6 @@ public class PatientBase implements Serializable {
     private String section;    //科别
     private String bedNo;    //床号
     private Date outDate;  //出院日期
+
+
 }

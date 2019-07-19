@@ -1,6 +1,5 @@
 package com.mshis.medicalSystem;
 
-import com.mshis.medicalSystem.dao.pharmacy.Uh03OnStoreDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +10,21 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringbootdemoApplicationTests {
 
-
-    @Autowired
-    private Uh03OnStoreDao uh03OnStoreDao;//在库
-
     @Test
     public void contextLoads() {
-
-        uh03OnStoreDao.saveNum(1,1);
     }
 
+
+    @Test
+    public void  test1(){
+
+    }
+
+    @Test
+    public void  test2(){
+
+//        System.out.println(tcmDao.findTcmsByIdOrAlias(1, "1"));
+//    tcmDao.getTCMMMMMByid(1).
+
+    }
 }

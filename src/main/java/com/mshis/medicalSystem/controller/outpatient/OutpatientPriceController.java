@@ -30,7 +30,7 @@ public class OutpatientPriceController {
     }
 
     @ApiOperation(value = "录入")
-    @ApiImplicitParam(name = "uh03Price",value = "门诊收费")
+    @ApiImplicitParam(name = "treat",value = "门诊收费")
     @PostMapping("/add")
     public Result add(Treat treat){
         return outpatientPriceService.add(treat);

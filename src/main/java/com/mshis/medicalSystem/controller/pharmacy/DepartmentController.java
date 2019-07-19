@@ -21,7 +21,7 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @ApiOperation(value = "录入")
-    @ApiImplicitParam(name = "uh03CompanyList",value = "部门编码")
+    @ApiImplicitParam(name = "department",value = "部门编码")
     @PostMapping("/add")
     public Result add(Department department){
         return departmentService.add(department);

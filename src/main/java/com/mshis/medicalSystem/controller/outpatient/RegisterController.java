@@ -28,7 +28,7 @@ public class RegisterController {
     }
 
     @ApiOperation(value = "录入")
-    @ApiImplicitParam(name = "uh03Price",value = "挂号")
+    @ApiImplicitParam(name = "register",value = "挂号")
     @PostMapping("/add")
     public Result add(Register register){
         return registerService.add(register);

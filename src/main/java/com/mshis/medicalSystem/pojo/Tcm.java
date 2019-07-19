@@ -1,7 +1,6 @@
 package com.mshis.medicalSystem.pojo;
 
 import lombok.Data;
-import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +11,7 @@ import java.io.Serializable;
  * create: 2019-07-14 9:10
  */
 @Entity
+@Table(name = "tcm")
 @Data
 public class Tcm implements Serializable {
 

@@ -47,7 +47,7 @@ public class SubjectService {
     }
 
     /**
-     * 查询 科目编码
+     * 查询 科目  编码
      * @return
      */
     public Result getAllSubject(){

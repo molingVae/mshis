@@ -16,7 +16,7 @@ public class Uh03StoreOut implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer outNo;             //   出库单号
 
-    private String mediNo;           //   药品代码
+    private Integer mediNo;           //   药品代码
 
     private String specification;     //   规格
 

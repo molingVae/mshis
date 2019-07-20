@@ -31,10 +31,10 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("springboot利用swagger构建api文档")
-                .description("简单优雅的restfun风格")
+                .title("医院HIS系统api文档")
+                .description("本后端采用Spring Boot敏捷开发，提供简单优雅的restfun风格的API接口")
                // .termsOfServiceUrl("http://blog.csdn.net/saytime")
-                .version("1.0")
+                .version("1.0.0")
                 .build();
     }
 }

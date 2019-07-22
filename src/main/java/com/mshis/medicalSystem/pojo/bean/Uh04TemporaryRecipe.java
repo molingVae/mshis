@@ -13,6 +13,7 @@ public class Uh04TemporaryRecipe implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;    //住院号
     private Integer patientNo;    //住院号
 
     private Date recipeDate;    //医嘱日期

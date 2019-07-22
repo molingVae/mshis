@@ -4,7 +4,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
+.idea/**
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
@@ -101,3 +101,10 @@ hs_err_pid*
 .idea/modules.xml
 .idea/mshis.iml
 .idea/vcs.xml
+target/classes/application.yml
+target/generated-sources/
+target/generated-test-sources/
+target/maven-archiver/
+target/maven-status/
+target/medicalSystem-0.0.1-SNAPSHOT.jar.original
+target/surefire-reports/

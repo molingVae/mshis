@@ -1,6 +1,6 @@
-package com.mshis.medicalSystem.service.hospitalization;
+package com.mshis.medicalSystem.service.hospitalizationControllerService;
 
-import com.mshis.medicalSystem.dao.hospitalization.PayMoneyDao;
+import com.mshis.medicalSystem.dao.hospitalizationControllerDao.PayMoneyDao;
 import com.mshis.medicalSystem.pojo.Code;
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.PayMoney;

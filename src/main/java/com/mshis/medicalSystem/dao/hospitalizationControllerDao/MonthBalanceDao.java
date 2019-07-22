@@ -1,4 +1,4 @@
-package com.mshis.medicalSystem.dao.hospitalization;
+package com.mshis.medicalSystem.dao.hospitalizationControllerDao;
 
 import com.mshis.medicalSystem.pojo.bean.Uh03MonthBalance;
 import org.springframework.data.jpa.repository.JpaRepository;

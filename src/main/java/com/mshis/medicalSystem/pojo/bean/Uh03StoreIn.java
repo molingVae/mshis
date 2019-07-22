@@ -15,7 +15,7 @@ public class Uh03StoreIn implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer inNo;             //   入库单号
 
-    private Integer mediNo;           //  药品代码
+    private String mediNo;           //  药品代码
     private String specification;     //  规格
     private String unit;              //   单位
     private Integer unitPrice;       //   单价

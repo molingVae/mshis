@@ -1,8 +1,8 @@
-package com.mshis.medicalSystem.controller.hospitalization;
+package com.mshis.medicalSystem.controller.hospitalizationController;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.PatientBase;
-import com.mshis.medicalSystem.service.hospitalization.PatientBaseService;
+import com.mshis.medicalSystem.service.hospitalizationControllerService.PatientBaseService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/patient")
 @CrossOrigin
 @Api("病人信息资料")
+
 public class PatientBaseController {
 
     @Autowired
@@ -26,7 +27,7 @@ public class PatientBaseController {
     @ApiOperation("录入")
     @ApiImplicitParam(name = "PatientBase", value = "添加病人基本信息")
     @PostMapping("/add")
-    public Result addPatientBaseMessage(PatientBase patientBase){
+    public Result addPatientBaseMessage(@RequestBody PatientBase patientBase){
         return patientBaseService.addPatientBaseMessage(patientBase);
     }
 
@@ -43,7 +44,7 @@ public class PatientBaseController {
     @ApiOperation("修改")
     @ApiImplicitParam(name = "Id", value = "修改病人基本资料")
     @PostMapping("/update")
-    public Result updatePatientBaseMessage(PatientBase patientBase){
+    public Result updatePatientBaseMessage(@RequestBody PatientBase patientBase){
         return patientBaseService.updatePatientBaseMessage(patientBase);
     }
 

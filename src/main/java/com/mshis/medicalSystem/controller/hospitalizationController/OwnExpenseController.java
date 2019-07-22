@@ -1,7 +1,7 @@
-package com.mshis.medicalSystem.controller.hospitalization;
+package com.mshis.medicalSystem.controller.hospitalizationController;
 
 import com.mshis.medicalSystem.pojo.Result;
-import com.mshis.medicalSystem.service.hospitalization.OwnExpenseService;
+import com.mshis.medicalSystem.service.hospitalizationControllerService.OwnExpenseService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

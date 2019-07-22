@@ -1,16 +1,13 @@
-package com.mshis.medicalSystem.controller.hospitalization;
+package com.mshis.medicalSystem.controller.hospitalizationController;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Ward;
-import com.mshis.medicalSystem.service.hospitalization.WardBedService;
+import com.mshis.medicalSystem.service.hospitalizationControllerService.WardBedService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * description: 床位登记
@@ -30,7 +27,7 @@ public class WardBedController {
     @ApiOperation("插入")
     @ApiImplicitParam(name = "Ward",value = "插入床位")
     @PostMapping("/bed/add")
-    public Result addWardBed(Ward ward){
+    public Result addWardBed(@RequestBody Ward ward){
         return wardBedService.addWardBed(ward);
     }
 
@@ -40,6 +37,5 @@ public class WardBedController {
     public Result updateWardBed(Ward ward){
         return wardBedService.addWardBed(ward);
     }
-
 
 }

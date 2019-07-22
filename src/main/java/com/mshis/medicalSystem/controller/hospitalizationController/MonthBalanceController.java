@@ -1,8 +1,8 @@
-package com.mshis.medicalSystem.controller.hospitalization;
+package com.mshis.medicalSystem.controller.hospitalizationController;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Uh03MonthBalance;
-import com.mshis.medicalSystem.service.hospitalization.MonthBalanceService;
+import com.mshis.medicalSystem.service.hospitalizationControllerService.MonthBalanceService;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class MonthBalanceController {
     @ApiOperation("添加")
     @ApiImplicitParam(name = "Uh03MonthBalance", value = "添加月报表")
     @PostMapping("/income")
-    public Result addMonthBalance(Uh03MonthBalance uh03MonthBalance){
+    public Result addMonthBalance(@RequestBody Uh03MonthBalance uh03MonthBalance){
         return monthBalanceService.addMonthBalance(uh03MonthBalance);
     }
 

@@ -1,8 +1,8 @@
-package com.mshis.medicalSystem.controller.hospitalization;
+package com.mshis.medicalSystem.controller.hospitalizationController;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Subject;
-import com.mshis.medicalSystem.service.hospitalization.SubjectService;
+import com.mshis.medicalSystem.service.hospitalizationControllerService.SubjectService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -27,7 +27,7 @@ public abstract class SubjectController  {
      @ApiOperation("插入")
      @ApiImplicitParam(name = "Subject", value = "插入科目编码")
      @PostMapping("/subject-coding/add")
-     public Result addSubject(Subject subject){
+     public Result addSubject(@RequestBody Subject subject){
          return subjectService.addSubject(subject);
      }
 
@@ -35,7 +35,7 @@ public abstract class SubjectController  {
     @ApiOperation("修改")
     @ApiImplicitParam(name = "Subject", value = "修改科目编码")
     @PostMapping("/subject-coding/update")
-    public Result updateSubject(Subject subject){
+    public Result updateSubject(@RequestBody Subject subject){
         return subjectService.updateSubject(subject);
     }
 

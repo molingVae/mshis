@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * description: 临时医嘱登记
@@ -29,7 +26,7 @@ public class TemporaryRecipeController {
     @ApiOperation("插入")
     @ApiImplicitParam(name = "Uh04TemporaryRecipe", value = "添加临时医嘱")
     @PostMapping("/temporary/add")
-    public Result addTemporaryRecipe(Uh04TemporaryRecipe uh04TemporaryRecipe){
+    public Result addTemporaryRecipe(@RequestBody Uh04TemporaryRecipe uh04TemporaryRecipe){
         return temporaryRecipe.addTemporaryRecipe(uh04TemporaryRecipe);
     }
 

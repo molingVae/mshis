@@ -26,7 +26,7 @@ public class PatientBaseController {
     @ApiOperation("录入")
     @ApiImplicitParam(name = "PatientBase", value = "添加病人基本信息")
     @PostMapping("/add")
-    public Result addPatientBaseMessage(PatientBase patientBase){
+    public Result addPatientBaseMessage(@RequestBody PatientBase patientBase){
         return patientBaseService.addPatientBaseMessage(patientBase);
     }
 
@@ -43,7 +43,7 @@ public class PatientBaseController {
     @ApiOperation("修改")
     @ApiImplicitParam(name = "Id", value = "修改病人基本资料")
     @PostMapping("/update")
-    public Result updatePatientBaseMessage(PatientBase patientBase){
+    public Result updatePatientBaseMessage(@RequestBody PatientBase patientBase){
         return patientBaseService.updatePatientBaseMessage(patientBase);
     }
 

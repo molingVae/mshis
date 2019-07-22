@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * description: 病人预交款情况登记
@@ -29,7 +26,7 @@ public class PayMoneyController {
     @ApiOperation("插入")
     @ApiImplicitParam(name = "Subject", value = "插入科目编码")
     @PostMapping("/settlement")
-    public Result addSubject(PayMoney payMoney){
+    public Result addSubject(@RequestBody PayMoney payMoney){
         return payMoneyService.addPayMoney(payMoney);
     }
 

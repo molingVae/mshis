@@ -7,10 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * description: ChargeTypeController
@@ -31,7 +28,7 @@ public class ChargeTypeController {
     @ApiOperation("添加")
     @ApiImplicitParam(name = "ChargeType", value = "添加 收费标准")
     @PostMapping("/add")
-    public Result addChargeType(ChargeType chargeType){
+    public Result addChargeType(@RequestBody ChargeType chargeType){
         return chargeTypeService.addChargeType(chargeType);
     }
 
@@ -45,7 +42,7 @@ public class ChargeTypeController {
     @ApiOperation("修改")
     @ApiImplicitParam(name = "ChargeType", value = "修改 收费标准")
     @PostMapping("/update")
-    public Result updateChargeType(ChargeType chargeType){
+    public Result updateChargeType(@RequestBody ChargeType chargeType){
         return chargeTypeService.updateChargeType(chargeType);
     }
 

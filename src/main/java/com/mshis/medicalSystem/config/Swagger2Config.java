@@ -31,10 +31,17 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
+<<<<<<< HEAD
                 .title("医院HIS系统api文档")
                 .description("本后端采用Spring Boot敏捷开发，提供简单优雅的restfun风格的API接口")
                // .termsOfServiceUrl("http://blog.csdn.net/saytime")
                 .version("1.0.0")
+=======
+                .title("springboot利用swagger构建api文档")
+                .description("简单优雅的restfun风格")
+               // .termsOfServiceUrl("http://blog.csdn.net/saytime")
+                .version("1.0")
+>>>>>>> 5dc050056d62c08b3ce0a94bf0f1317628298a7d
                 .build();
     }
 }

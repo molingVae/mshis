@@ -30,7 +30,11 @@ spring:
   cache:
     type: redis
   redis:
+<<<<<<< HEAD
     host: 127.0.0.1
 
 
 
+=======
+    host: 127.0.0.1
+>>>>>>> 5dc050056d62c08b3ce0a94bf0f1317628298a7d

@@ -42,7 +42,7 @@ public class CardController {
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "card",value = "医疗卡充值")
-    @PostMapping("/recharge")
+    @PostMapping("/add")
     public Result saveMoney(Card card){
         return cardService.saveMoney(card);
     }

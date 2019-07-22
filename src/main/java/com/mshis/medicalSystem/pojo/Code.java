@@ -3,8 +3,6 @@ package com.mshis.medicalSystem.pojo;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-
 /**
  * description:
  * author: 沫凌

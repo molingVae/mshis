@@ -15,13 +15,5 @@ public class SpringbootdemoApplicationTests {
     }
 
 
-    @Test
-    public void  test1(){
 
-    }
-
-    @Test
-    public void  test2(){
-
-    }
 }

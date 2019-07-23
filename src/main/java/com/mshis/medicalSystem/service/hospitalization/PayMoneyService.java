@@ -17,10 +17,6 @@ public class PayMoneyService {
 
     @Autowired
     private PayMoneyDao payMoneyDao;
-
-    @Autowired
-    private Code code;
-
     /**
      * 添加 病人预交款情况登记
      * @param payMoney
@@ -29,6 +25,12 @@ public class PayMoneyService {
     public Result addPayMoney(PayMoney payMoney){
         payMoneyDao.save(payMoney);
         Result result = new Result(Code.OK, "添加成功");
+        return result;
+    }
+
+    public Result getAll() {
+        Result result=new Result(Code.OK,"查询成功");
+        result.setData(payMoneyDao.findAll());
         return result;
     }
 }

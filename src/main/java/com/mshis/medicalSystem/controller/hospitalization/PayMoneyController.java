@@ -30,4 +30,12 @@ public class PayMoneyController {
         return payMoneyService.addPayMoney(payMoney);
     }
 
+
+    @ApiOperation("查询所有")
+    @ApiImplicitParam(name = "Subject", value = "查询所有")
+    @PostMapping("/get-all")
+    public Result getAll(){
+        return payMoneyService.getAll();
+    }
+
 }

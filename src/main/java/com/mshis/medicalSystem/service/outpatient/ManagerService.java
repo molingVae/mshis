@@ -61,4 +61,10 @@ public class ManagerService {
         subjectDao.deleteById(id);
         return new Result(Code.OK,"删除成功");
     }
+
+    public Result findAll() {
+        Result result=new Result(Code.OK,"查询成功");
+        result.setData(subjectDao.findAll());
+        return result;
+    }
 }

@@ -62,6 +62,16 @@ public class ManagerController {
 
     }
 
+    @ApiOperation(value = "查询")
+    @ApiImplicitParam(name = "subject",value = "查询")
+    @PostMapping("/check/query")
+    public Result getAll(){
+        return managerService.findAll();
+
+    }
+
+
+
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "门诊科目ID")
     @DeleteMapping("/check/delete")

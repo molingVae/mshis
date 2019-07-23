@@ -101,3 +101,10 @@ hs_err_pid*
 .idea/modules.xml
 .idea/mshis.iml
 .idea/vcs.xml
+target
+target/generated-sources/
+target/generated-test-sources/
+target/maven-archiver/
+target/maven-status/
+target/medicalSystem-0.0.1-SNAPSHOT.jar.original
+target/surefire-reports/

@@ -33,7 +33,7 @@ public class MedicalRecordController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "firstPage",value = "病案")
     @PostMapping("/add")
-    public Result add(FirstPage firstPage){
+    public Result add(@RequestBody FirstPage firstPage){
         return medicalRecordService.add(firstPage);
 
     }
@@ -41,7 +41,7 @@ public class MedicalRecordController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "病案号(YYYY9999)")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return medicalRecordService.delete(id);
     }
 }

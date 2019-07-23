@@ -23,7 +23,7 @@ public class DepartmentController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "department",value = "部门编码")
     @PostMapping("/add")
-    public Result add(Department department){
+    public Result add(@RequestBody Department department){
         return departmentService.add(department);
 
     }
@@ -31,7 +31,7 @@ public class DepartmentController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "部门编码ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return departmentService.delete(id);
     }
 }

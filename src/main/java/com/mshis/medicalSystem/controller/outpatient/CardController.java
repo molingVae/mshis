@@ -30,13 +30,13 @@ public class CardController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "card",value = "医疗卡")
     @PostMapping("/add")
-    public Result add(Card card){
+    public Result add(@RequestBody Card card){
         return cardService.add(card);
     }
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "card",value = "医疗卡挂失")
     @PostMapping("/lose")
-    public Result flag(Card card){
+    public Result flag(@RequestBody Card card){
         return cardService.flag(card);
     }
 

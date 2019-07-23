@@ -32,7 +32,7 @@ public class OperationController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "operation",value = "手术情况")
     @PostMapping("/add")
-    public Result add(Operation operation){
+    public Result add(@RequestBody Operation operation){
         return operationService.add(operation);
 
     }
@@ -40,7 +40,7 @@ public class OperationController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "病案号(YYYY9999)")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return operationService.delete(id);
     }
 }

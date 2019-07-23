@@ -30,7 +30,7 @@ public class RegisterController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "register",value = "挂号")
     @PostMapping("/add")
-    public Result add(Register register){
+    public Result add(@RequestBody Register register){
         return registerService.add(register);
 
     }
@@ -38,7 +38,7 @@ public class RegisterController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "挂号ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return registerService.delete(id);
     }
     

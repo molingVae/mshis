@@ -27,7 +27,7 @@ public class ManagerController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "doctor",value = "医生科室")
     @PostMapping("/doctor/add")
-    public Result addDoctor(Doctor doctor){
+    public Result addDoctor(@RequestBody Doctor doctor){
         return managerService.addDoctor(doctor);
 
     }
@@ -35,14 +35,14 @@ public class ManagerController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "医生科室ID")
     @DeleteMapping("/doctor/delete")
-    public Result deleteDoctor(Integer id){
+    public Result deleteDoctor(@RequestBody Integer id){
         return managerService.deleteDoctor(id);
     }
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "checkStandard",value = "检查项目")
     @PostMapping("/outpatient/add")
-    public Result addCheckStandard(CheckStandard checkStandard){
+    public Result addCheckStandard(@RequestBody CheckStandard checkStandard){
         return managerService.addCheckStandard(checkStandard);
 
     }

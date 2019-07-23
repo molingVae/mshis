@@ -32,7 +32,7 @@ public class OutpatientPriceController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "treat",value = "门诊收费")
     @PostMapping("/add")
-    public Result add(Treat treat){
+    public Result add(@RequestBody Treat treat){
         return outpatientPriceService.add(treat);
 
     }
@@ -40,7 +40,7 @@ public class OutpatientPriceController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "门诊收费ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return outpatientPriceService.delete(id);
     }
 }

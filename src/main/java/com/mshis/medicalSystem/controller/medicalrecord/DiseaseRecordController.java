@@ -32,7 +32,7 @@ public class DiseaseRecordController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "caseHistory",value = "病历")
     @PostMapping("/add")
-    public Result add(CaseHistory caseHistory){
+    public Result add(@RequestBody CaseHistory caseHistory){
         return diseaseRecordService.add(caseHistory);
 
     }
@@ -40,7 +40,7 @@ public class DiseaseRecordController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "病案号(YYYY9999)")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return diseaseRecordService.delete(id);
     }
 }

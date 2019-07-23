@@ -30,7 +30,7 @@ public class SupplierController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "uh03CompanyList",value = "供应商编码")
     @PostMapping("/add")
-    public Result add(Uh03CompanyList uh03CompanyList){
+    public Result add(@RequestBody Uh03CompanyList uh03CompanyList){
         return supplierService.add(uh03CompanyList);
 
     }
@@ -38,7 +38,7 @@ public class SupplierController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "供应商编码ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return supplierService.delete(id);
     }
 }

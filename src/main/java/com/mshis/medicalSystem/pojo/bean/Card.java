@@ -3,6 +3,7 @@ package com.mshis.medicalSystem.pojo.bean;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Date;
 @Entity
 @Table(name = "card")
 @Data
-public class Card {
+public class Card implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;//医疗卡号

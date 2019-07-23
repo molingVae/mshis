@@ -33,7 +33,7 @@ public class DiseaseCodingController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "diagnose",value = "疾病诊断国际（ICD-9）编码")
     @PostMapping("/add")
-    public Result add(Diagnose diagnose){
+    public Result add(@RequestBody Diagnose diagnose){
         return diseaseCodingService.add(diagnose);
 
     }
@@ -41,7 +41,7 @@ public class DiseaseCodingController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "疾病诊断国际（ICD-9）ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return diseaseCodingService.delete(id);
     }
 }

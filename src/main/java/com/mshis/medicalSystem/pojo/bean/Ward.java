@@ -17,4 +17,11 @@ public class Ward implements Serializable {
     private String section;  //科别
     private String patientName;    //姓名
     private String patientSex;    //性别
+
+
+    private Boolean state;
+    private String type;
+    private String price;
+    private String place;
+    private String room;
 }

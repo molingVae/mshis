@@ -33,7 +33,7 @@ public class PayMoneyController {
 
     @ApiOperation("查询所有")
     @ApiImplicitParam(name = "Subject", value = "查询所有")
-    @PostMapping("/get-all")
+    @GetMapping("/get-all")
     public Result getAll(){
         return payMoneyService.getAll();
     }

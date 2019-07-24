@@ -28,9 +28,13 @@ public class SupplierService {
         return new Result(Code.OK,"添加成功");
     }
 
-
     public Result delete(Integer id) {
         uh03CompanyListDao.deleteById(id);
         return new Result(Code.OK,"删除成功");
+    }
+
+    public Result update(Uh03CompanyList uh03CompanyList) {
+        uh03CompanyListDao.save(uh03CompanyList);
+        return new Result(Code.OK,"修改成功");
     }
 }

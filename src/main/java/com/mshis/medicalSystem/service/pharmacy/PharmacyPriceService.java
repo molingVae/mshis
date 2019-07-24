@@ -34,4 +34,9 @@ public class PharmacyPriceService {
         uh03PriceDao.deleteById(id);
         return new Result(Code.OK,"删除成功");
     }
+
+    public Result save(Uh03Price uh03Price) {
+        uh03PriceDao.save(uh03Price);
+        return new Result(Code.OK,"删除成功");
+    }
 }

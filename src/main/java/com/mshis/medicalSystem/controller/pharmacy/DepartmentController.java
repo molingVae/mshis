@@ -27,11 +27,16 @@ public class DepartmentController {
         return departmentService.add(department);
 
     }
-
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "部门编码ID")
     @DeleteMapping("/delete")
-    public Result delete(@RequestBody Integer id){
+    public Result delete(Integer id){
         return departmentService.delete(id);
+    }
+
+    @ApiOperation(value = "查询")
+    @GetMapping("/query")
+    public Result query(){
+        return departmentService.query();
     }
 }

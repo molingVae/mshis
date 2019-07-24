@@ -30,7 +30,7 @@ public class PharmacyPriceController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "uh03Price",value = "调价")
     @PostMapping("/add")
-    public Result add(@RequestBody Uh03Price uh03Price){
+    public Result add(Uh03Price uh03Price){
         return uh03PriceService.add(uh03Price);
 
     }
@@ -38,7 +38,14 @@ public class PharmacyPriceController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "调价ID")
     @DeleteMapping("/delete")
-    public Result delete(@RequestBody Integer id){
+    public Result delete(Integer id){
         return uh03PriceService.delete(id);
+    }
+
+    @ApiOperation(value = "修改")
+    @ApiImplicitParam(name = "uh03Price",value = "调价")
+    @PostMapping("/update")
+    public Result save(Uh03Price uh03Price){
+        return uh03PriceService.save(uh03Price);
     }
 }

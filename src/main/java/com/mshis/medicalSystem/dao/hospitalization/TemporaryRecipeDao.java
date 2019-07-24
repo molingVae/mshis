@@ -14,5 +14,5 @@ import java.util.List;
  */
 @Component
 public interface TemporaryRecipeDao extends JpaRepository<Uh04TemporaryRecipe, Integer> {
-    List<TemporaryRecipe> findAllByPatientNo(Integer id);
+    List<Uh04TemporaryRecipe> findAllByPatientNo(Integer id);
 }

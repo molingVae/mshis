@@ -39,7 +39,7 @@ public class TemporaryRecipeController {
 
     @ApiOperation("查询")
     @ApiImplicitParam(name = "Uh04TemporaryRecipe", value = "根据病人id查询临时医嘱")
-    @GetMapping("/temporary/query")
+    @GetMapping("/temporary/query-id")
     public Result getTemporaryRecipeById(Integer id){
         return temporaryRecipe.findById(id);
     }

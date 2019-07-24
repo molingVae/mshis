@@ -27,4 +27,15 @@ public class TemporaryRecipe {
         return result;
     }
 
+    public Result findAll() {
+        Result result = new Result(Code.OK, "查询成功");
+        result.setData(temporaryRecipeDao.findAll());
+        return result;
+    }
+
+    public Result findById(Integer id) {
+        Result result = new Result(Code.OK, "查询成功");
+        result.setData(temporaryRecipeDao.findAllByPatientNo(id));
+        return result;
+    }
 }

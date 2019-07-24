@@ -32,6 +32,14 @@ public class ManagerController {
 
     }
 
+    @ApiOperation(value = "查询")
+    @ApiImplicitParam(name = "doctor",value = "医生科室")
+    @GetMapping("/doctor/query")
+    public Result getDoctorAll(){
+        return managerService.findDoctorAll();
+
+    }
+
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "医生科室ID")
     @DeleteMapping("/doctor/delete")
@@ -54,6 +62,14 @@ public class ManagerController {
         return managerService.deleteCheckStandard(id);
     }
 
+
+    @ApiOperation(value = "查询")
+    @ApiImplicitParam(name = "id",value = "查询检查项目ID")
+    @GetMapping("/outpatient/query")
+    public Result getAllCheckStandard(){
+        return managerService.findAllCheck();
+    }
+
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "subject",value = "门诊科目")
     @PostMapping("/check/add")
@@ -62,11 +78,11 @@ public class ManagerController {
 
     }
 
-    @ApiOperation(value = "查询")
-    @ApiImplicitParam(name = "subject",value = "查询")
-    @PostMapping("/check/query")
+    @ApiOperation(value = "查询门诊科目")
+    @ApiImplicitParam(name = "subject",value = "查询门诊科目")
+    @GetMapping("/check/query")
     public Result getAll(){
-        return managerService.findAll();
+        return managerService.findSubjectAll();
 
     }
 

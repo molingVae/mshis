@@ -9,4 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * create: 2019-07-18 10:07
  */
 public interface DiseaseRecordDao extends JpaRepository<CaseHistory,Integer> {
+
+    CaseHistory findFirstByChNumAndChTimes(Integer chNum,Integer chTimes);
 }

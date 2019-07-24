@@ -24,9 +24,10 @@ public class DiseaseRecordController {
     private DiseaseRecordService diseaseRecordService;
 
     @ApiOperation(value = "查询")
-    @GetMapping("/query")
-    public Result query(){
-        return diseaseRecordService.query();
+    @PostMapping("/query")
+    public Result query(@RequestBody CaseHistory caseHistory){
+
+        return diseaseRecordService.query(caseHistory);
     }
 
     @ApiOperation(value = "录入")

@@ -32,6 +32,7 @@ public class FirstPage implements Serializable {
 	private String fgPhonenum;	//	 本人电话
 	private String fgUnitPostalcodet;	//	 工作单位邮编
 	private String fgAddress;	//	*户口地址
+	private String fgHomeAddress;
 	private String fgHomePostalcode;	//	 居住地邮编
 	private String fgLinkmanName;	//	*联系人
 	private String fgLinkmanRelation;	//	*关系

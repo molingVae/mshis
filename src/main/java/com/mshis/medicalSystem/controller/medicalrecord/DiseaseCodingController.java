@@ -25,9 +25,9 @@ public class DiseaseCodingController {
 
 
     @ApiOperation(value = "查询")
-    @GetMapping("/query")
-    public Result query(){
-           return diseaseCodingService.query();
+    @PostMapping("/query/{page}/{size}")
+    public Result query(@RequestBody(required = false) Diagnose diagnose,@PathVariable int page,@PathVariable int size){
+        return diseaseCodingService.query(diagnose,page,size);
     }
 
     @ApiOperation(value = "录入")
@@ -40,8 +40,18 @@ public class DiseaseCodingController {
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "疾病诊断国际（ICD-9）ID")
-    @DeleteMapping("/delete")
-    public Result delete(@RequestBody Integer id){
+    @GetMapping("/delete/{id}")
+    public Result delete(@PathVariable  Integer id){
+
+        System.out.println(id);
         return diseaseCodingService.delete(id);
+    }
+
+    @ApiOperation(value = "修改")
+    @ApiImplicitParam(name = "diagnose",value = "疾病诊断国际（ICD-9）编码")
+    @PostMapping("/updata")
+    public Result updata(@RequestBody Diagnose diagnose){
+        return diseaseCodingService.updata(diagnose);
+
     }
 }

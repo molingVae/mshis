@@ -21,6 +21,8 @@ public class Diagnose implements Serializable {
 
     private String diseaseIcd9; //ICD-9编码
 
+    private String diseaseIc9Name;//名称
+
     private String diseaseCode; //拼音码
 
     private String diseaseType; //疾病分类码

@@ -26,7 +26,7 @@ public class ChargeTypeController {
 
 
     @ApiOperation("添加")
-    @ApiImplicitParam(name = "ChargeType", value = "添加 收费标准")
+    @ApiImplicitParam(name = "ChargeType", value = "添加收费标准")
     @PostMapping("/add")
     public Result addChargeType(@RequestBody ChargeType chargeType){
         return chargeTypeService.addChargeType(chargeType);
@@ -34,7 +34,7 @@ public class ChargeTypeController {
 
     @ApiOperation("查询")
     @ApiImplicitParam(name = "", value = "查询 收费标准")
-    @PostMapping("/query")
+    @GetMapping("/query")
     public Result getAllChargeType(){
         return chargeTypeService.getAllChargeType();
     }

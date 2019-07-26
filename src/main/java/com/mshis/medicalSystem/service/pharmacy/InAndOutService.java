@@ -66,7 +66,7 @@ public class InAndOutService {
         return new Result(Code.OK,"查询成功",uh03StoreInDao.findAll());
     }
 
-    public Result queryOut() {
-        return new Result(Code.OK,"查询成功",uh03StoreOutDao.findAll());
+    public Result queryOut(Integer outNo) {
+        return new Result(Code.OK,"查询成功",uh03StoreOutDao.findById(outNo));
     }
 }

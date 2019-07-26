@@ -12,6 +12,7 @@ public class Uh03Price implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer mediNo;           //  药品代码
+
     private String specification;     //   规格
     private String unit;              //    单位
     private Integer unitPrice;       //    单价

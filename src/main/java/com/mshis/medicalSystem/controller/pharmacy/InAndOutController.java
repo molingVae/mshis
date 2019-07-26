@@ -47,8 +47,8 @@ public class InAndOutController {
 
     @ApiOperation(value = "查询出库表")
     @ApiImplicitParam(name = "uh03StoreOut",value = "出库表")
-    @GetMapping("/query/out")
-    public Result queryOut(){
-        return inAndOutService.queryOut();
+    @GetMapping("/query/out/{outNo}")
+    public Result queryOut(@PathVariable Integer outNo){
+        return inAndOutService.queryOut(outNo);
     }
 }

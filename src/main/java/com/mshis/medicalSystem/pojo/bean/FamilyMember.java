@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,6 +22,8 @@ public class FamilyMember implements Serializable {
 
     private String memberName;     //成员姓名
     private String memberSex; //成员性别
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date memberBirthDate; //出生日期
     private String memberParty; //政治面目
     private String memberWorkUnit; //现在工作单位及职务

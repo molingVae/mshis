@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class Prescription implements Serializable {
     private Integer mediMoney;        // 金额
     private String unit;               //单位
     private String doctor;             // 医生代号
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date todayDate;           //计价日期
     private String subjectNo;         //门诊科目
     private String opera;              // 计价员号

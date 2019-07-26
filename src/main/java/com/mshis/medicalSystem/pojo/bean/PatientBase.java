@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,10 +16,11 @@ public class PatientBase implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer patientNo;    //住院号
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date inDate;    //入院日期
     private String patientName; //姓名
     private String patientSex;  //性别
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date birthDate;  //出生日期
     private String marry;    //婚否
     private String occupation;    //职业
@@ -41,5 +43,6 @@ public class PatientBase implements Serializable {
     private String icd9;    //ICD-9编码
     private String section;    //科别
     private String bedNo;    //床号
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date outDate;  //出院日期
 }

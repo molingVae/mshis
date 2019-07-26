@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,7 +16,7 @@ public class Uh04TemporaryRecipe implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;    //住院号
     private Integer patientNo;    //住院号
-
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date recipeDate;    //医嘱日期
     private String sectionCode; //科室编码
     private String cureType;  //收费类别

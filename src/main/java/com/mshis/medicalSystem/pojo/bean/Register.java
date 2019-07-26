@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Register implements Serializable {
     private Integer personsNo;//挂号医疗卡号
     private Integer sectionNo;  // 挂号科室
     private String patientName; //挂号姓名
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date  registerDate;//挂号时间
     private Integer registerPrice;//挂号费用
 

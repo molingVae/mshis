@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -22,8 +23,9 @@ public class FirstPage implements Serializable {
 	private Integer fgTimes;	//	第几次入院
 	private String fgName;	//	*姓名
 	private String fgSex;	//	*性别
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date fgBirthday;	//	*出生日期
-	private boolean fgMarriage;	//	*婚姻状况
+	private Boolean fgMarriage;	//	*婚姻状况
 	private String fgOccupation;	//	*职业
 	private String fgBirthplace;	//	*籍贯
 	private String fgNationality;	//	*国籍
@@ -40,17 +42,20 @@ public class FirstPage implements Serializable {
 	private String fgLinkmanPhonenum;	//	*联系人电话
 	private String fgDepartment;	//	*入院科别
 	private String fgRoom;	//	*入院病室
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date fgInTime;	//	*入院日期时间
 	private String fgInStatus;	//	入院时情况
 	private String fgPayway;	//	*交费方式
 	private String fgChangedepartment;	//	转科情况
 	private String fgOutDepartment;	//	出院科别
 	private String fgOutRoom;	//	出院病室
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date fgOutDate;	//	出院日期
 	private String fgOutDiagnose;	//	门诊诊断
 	private String fgOutDiagnoseCode;	//	门诊诊断编码
 	private String fgInDiagnose;	//	入院诊断
 	private String fgInDiagnoseCode;	//	入院诊断编码
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date fgDiagnoseDate;	//	确诊日期
 	private String fgMainDiagnose;	//	主要诊断
 	private String fgMainDiagnoseCode;	//	主要诊断编码
@@ -67,27 +72,28 @@ public class FirstPage implements Serializable {
 	private String fgDiseaseCaseQuality;	//	病案质量
 	private Integer fgTimesSave;	//	抢救次数
 	private Integer fgTimesSuccess;	//	成功次数
-	private boolean fg_followDiagnose;	//	随诊
+	private Boolean fg_followDiagnose;    //	随诊
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date fgFollowDiagnoseLimit;	//	随诊期限
-	private boolean fgAshesCheck;	//	尸检
-	private double fgTotalCharge;	//	住院费用总计
+	private Boolean fgAshesCheck;	//	尸检
+	private Double fgTotalCharge;	//	住院费用总计
 	private Integer fgBedCharge;	//	*床位
-	private double fgWesternMedicineCharge;	//	*西药
-	private double fgChineseMedicineCharge;	//	*中药
+	private Double fgWesternMedicineCharge;	//	*西药
+	private Double fgChineseMedicineCharge;	//	*中药
 	private Integer fgCheckCharge;	//	*检查
 	private Integer fgCureCharge;	//	*治疗
 	private Integer fgRadiateCharge;	//	*放射
 	private Integer fgOperationCharge;	//	*手术
-	private double fgAssayCharge;	//	*化验
+	private Double fgAssayCharge;	//	*化验
 	private Integer fgTransfuseCharge;	//	*输血
-	private double fgOxygenTherapyCharge;	//	*输氧
+	private Double fgOxygenTherapyCharge;	//	*输氧
 	private Integer fgAccoucheCharge;	//	*接生
-	private double fgRestCharge;	//	*其他
+	private Double fgRestCharge;	//	*其他
 	private String fgWholeNum;	//	*统筹号
 	private Integer fgIndividualShares;	//	*个人分担（%）
 	private String fgCheckoutWay;	//	*结帐方式
-	private boolean fgLeaveHospital;	//	*出院否
-	private boolean fgShowDiseasecase;	//	示教病例
+	private Boolean fgLeaveHospital;	//	*出院否
+	private Boolean fgShowDiseasecase;	//	示教病例
 	private String fgSignatureDirectorDoctor;	//	主任医师签名
 	private String fgSignatureChargeDoctor;	//	主治医师签名
 	private String fgSignatureHouseDoctor;	//	住院医师签名

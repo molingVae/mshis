@@ -19,7 +19,7 @@ public class Register implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer registerId;//挂号id
 
-    private Integer doctorNo;//医生代号
+    private String dotorName;//医生代号
     private Integer personsNo;//挂号医疗卡号
     private Integer sectionNo;  // 挂号科室
     private String patientName; //挂号姓名

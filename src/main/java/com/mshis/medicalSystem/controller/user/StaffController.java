@@ -34,8 +34,8 @@ public class StaffController {
     @ApiImplicitParam(name = "personBase",value = "人事基本资料")
     @PostMapping("/add")
     public Result add(PersonBase personBase){
+        System.out.println(personBase.toString());
         return staffService.add(personBase);
-
     }
 
     @ApiOperation(value = "删除")

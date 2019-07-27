@@ -32,9 +32,9 @@ public class AuthorityController {
     @ApiOperation(value = "添加")
     @ApiImplicitParam(name = "userAuth",value = "用户权限")
     @PostMapping("/add")
-    public Result add(UserAuth userAuth){
+    public Result add(@RequestBody UserAuth userAuth){
+        System.out.println(" 1111 userAuth"+userAuth.toString());
         return authorityService.add(userAuth);
-
     }
 
     @ApiOperation(value = "删除")
@@ -48,9 +48,9 @@ public class AuthorityController {
     @ApiOperation(value = "更新")
     @ApiImplicitParam(name = "userAuth",value = "用户权限")
     @PutMapping("/update")
-    public Result update(UserAuth userAuth){
+    public Result update(@RequestBody UserAuth userAuth){
+        System.out.println(" 2222userAuth"+userAuth.toString());
         return authorityService.update(userAuth);
-
     }
 
 }

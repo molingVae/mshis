@@ -21,6 +21,7 @@ public class StaffService {
 
     public Result query() {
         return new Result(Code.OK,"查询成功",staffDao.findAll());
+
     }
 
 

@@ -12,6 +12,8 @@ public class ChargeType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id  ;
+
     private Integer chargeNo;    //收费类型代码
 
     private String chargeName; //收费类型名称

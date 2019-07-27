@@ -32,7 +32,7 @@ public class PriceController {
     @ApiOperation(value = "添加")
     @ApiImplicitParam(name = "chargeType",value = "收费类型代码")
     @PostMapping("/add")
-    public Result add(@RequestBody ChargeType chargeType){
+    public Result add(ChargeType chargeType){
         return priceService.add(chargeType);
 
     }
@@ -40,7 +40,7 @@ public class PriceController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "收费类型代码")
     @DeleteMapping("/delete")
-    public Result delete(@RequestBody Integer id){
+    public Result delete(Integer id){
         return priceService.delete(id);
     }
 
@@ -48,7 +48,7 @@ public class PriceController {
     @ApiOperation(value = "更新")
     @ApiImplicitParam(name = "chargeType",value = "收费类型代码")
     @PutMapping("/update")
-    public Result update(@RequestBody ChargeType chargeType){
+    public Result update(ChargeType chargeType){
         return priceService.update(chargeType);
 
     }

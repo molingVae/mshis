@@ -24,13 +24,9 @@ public class Persons implements Serializable {
     private Integer chargeNo;    //收费类型代码
     private String telephony;    //电话号码
     private String contactAddress;  //地址
-
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthDate;    //出生日期
     private String married;    //婚否
-
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date registerDate;    //发证日期
     private String cardMark;    //补发医疗卡标记
 

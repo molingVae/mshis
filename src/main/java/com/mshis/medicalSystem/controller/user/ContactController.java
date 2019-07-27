@@ -34,14 +34,14 @@ public class ContactController {
     @ApiImplicitParam(name = "diagnose",value = "疾病诊断国际（ICD-9）编码")
     @PostMapping("/add")
     public Result add(FamilyMember familyMember){
-        System.out.println("111"+familyMember.toString());
         return contactService.add(familyMember);
+
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "疾病诊断国际（ICD-9）ID")
     @DeleteMapping("/delete")
-    public Result delete( Integer id){
+    public Result delete(Integer id){
         return contactService.delete(id);
     }
 }

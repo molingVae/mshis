@@ -33,7 +33,7 @@ public class StaffController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "personBase",value = "人事基本资料")
     @PostMapping("/add")
-    public Result add( PersonBase personBase){
+    public Result add(PersonBase personBase){
         return staffService.add(personBase);
 
     }

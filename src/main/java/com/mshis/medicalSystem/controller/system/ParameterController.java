@@ -33,7 +33,7 @@ public class ParameterController {
     @ApiOperation(value = "添加")
     @ApiImplicitParam(name = "paraments",value = "系统参数")
     @PostMapping("/add")
-    public Result add(@RequestBody Paraments paraments){
+    public Result add(Paraments paraments){
         return parameterService.add(paraments);
 
     }
@@ -41,7 +41,7 @@ public class ParameterController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "系统参数ID")
     @DeleteMapping("/delete")
-    public Result delete(@RequestBody Integer id){
+    public Result delete(Integer id){
         return parameterService.delete(id);
     }
 
@@ -49,7 +49,7 @@ public class ParameterController {
     @ApiOperation(value = "更新")
     @ApiImplicitParam(name = "paraments",value = "系统参数")
     @PutMapping("/update")
-    public Result update(@RequestBody Paraments paraments){
+    public Result update(Paraments paraments){
         return parameterService.update(paraments);
 
     }

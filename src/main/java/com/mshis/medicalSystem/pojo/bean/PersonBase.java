@@ -18,7 +18,7 @@ import java.util.Date;
 public class PersonBase implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer SectionNo;    //	科室编号
+    private Integer  SectionNo;      //	科室编号
 
     private Integer PersonNo;    //	职工编号
     private String SpellNo;    //	拼音码

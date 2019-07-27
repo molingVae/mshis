@@ -2,6 +2,7 @@ package com.mshis.medicalSystem.controller.pharmacy;
 
 import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.Uh03CompanyList;
+import com.mshis.medicalSystem.pojo.bean.Uh03Price;
 import com.mshis.medicalSystem.service.pharmacy.SupplierService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -22,23 +23,31 @@ public class SupplierController {
 
 
     @ApiOperation(value = "查询")
-    @GetMapping("/query")
-    public Result query(){
-        return supplierService.query();
+    @PostMapping("/query/{page}/{size}")
+    public Result query(@RequestBody(required = false) Uh03CompanyList uh03CompanyList, @PathVariable int page, @PathVariable int size){
+        return supplierService.query(uh03CompanyList,page,size);
     }
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "uh03CompanyList",value = "供应商编码")
     @PostMapping("/add")
-    public Result add(Uh03CompanyList uh03CompanyList){
+    public Result add(@RequestBody  Uh03CompanyList uh03CompanyList){
         return supplierService.add(uh03CompanyList);
 
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "供应商编码ID")
-    @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    @GetMapping("/delete/{id}")
+    public Result delete(@PathVariable  Integer id){
         return supplierService.delete(id);
+    }
+
+    @ApiOperation(value = "修改")
+    @ApiImplicitParam(name = "uh03CompanyList",value = "供应商编码")
+    @PostMapping("/update")
+    public Result update(@RequestBody  Uh03CompanyList uh03CompanyList){
+        return supplierService.update(uh03CompanyList);
+
     }
 }

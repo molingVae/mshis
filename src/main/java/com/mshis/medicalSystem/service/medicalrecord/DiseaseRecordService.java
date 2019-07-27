@@ -6,6 +6,7 @@ import com.mshis.medicalSystem.pojo.Result;
 import com.mshis.medicalSystem.pojo.bean.CaseHistory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * description:
@@ -19,8 +20,9 @@ public class DiseaseRecordService {
     private DiseaseRecordDao diseaseRecordDao;
 
 
-    public Result query() {
-        return new Result(Code.OK,"查询成功",diseaseRecordDao.findAll());
+    public Result query(CaseHistory caseHistory) {
+        return new Result(Code.OK,"查询成功",diseaseRecordDao.
+                findFirstByChNumAndChTimes(caseHistory.getChNum(),caseHistory.getChTimes()));
     }
 
 

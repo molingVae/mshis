@@ -24,23 +24,23 @@ public class OperationController {
     private OperationService operationService;
 
     @ApiOperation(value = "查询")
-    @GetMapping("/query")
-    public Result query(){
-        return operationService.query();
+    @PostMapping("/query/{page}/{size}")
+    public Result query(@RequestBody Operation operation ,@PathVariable int page,@PathVariable int size){
+        return operationService.query(operation,page,size);
     }
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "operation",value = "手术情况")
     @PostMapping("/add")
-    public Result add(Operation operation){
+    public Result add(@RequestBody Operation operation){
         return operationService.add(operation);
 
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "病案号(YYYY9999)")
-    @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    @GetMapping("/delete/{id}")
+    public Result delete(@PathVariable Integer id){
         return operationService.delete(id);
     }
 }

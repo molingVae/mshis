@@ -30,5 +30,19 @@ public class TemporaryRecipeController {
         return temporaryRecipe.addTemporaryRecipe(uh04TemporaryRecipe);
     }
 
+    @ApiOperation("查询")
+    @ApiImplicitParam(name = "Uh04TemporaryRecipe", value = "查询临时医嘱")
+    @GetMapping("/temporary/query")
+    public Result getAllTemporaryRecipe(){
+        return temporaryRecipe.findAll();
+    }
+
+    @ApiOperation("查询")
+    @ApiImplicitParam(name = "Uh04TemporaryRecipe", value = "根据病人id查询临时医嘱")
+    @GetMapping("/temporary/query-id")
+    public Result getTemporaryRecipeById(Integer id){
+        return temporaryRecipe.findById(id);
+    }
+
 
 }

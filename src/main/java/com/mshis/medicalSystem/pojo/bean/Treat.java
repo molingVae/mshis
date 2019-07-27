@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 
@@ -14,6 +15,7 @@ public class Treat implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer personsNo;        // 医疗卡号
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date treatDate;          //看病日期
     private Integer mediTotal;       //  药费总额
     private Integer percentage;       //  应扣百分比

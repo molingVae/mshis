@@ -27,14 +27,14 @@ public class InAndOutController {
     @ApiOperation(value = "入库")
     @ApiImplicitParam(name = "uh03StoreIn",value = "入库登记")
     @PostMapping("/in")
-    public Result in(Uh03StoreIn uh03StoreIn){
+    public Result in(@RequestBody Uh03StoreIn uh03StoreIn){
         return inAndOutService.in(uh03StoreIn);
     }
 
     @ApiOperation(value = "出库")
     @ApiImplicitParam(name = "uh03StoreOut",value = "出库登记")
     @PostMapping("/out")
-    public Result out(Uh03StoreOut uh03StoreOut){
+    public Result out(@RequestBody Uh03StoreOut uh03StoreOut){
         return inAndOutService.out(uh03StoreOut);
     }
 
@@ -47,8 +47,8 @@ public class InAndOutController {
 
     @ApiOperation(value = "查询出库表")
     @ApiImplicitParam(name = "uh03StoreOut",value = "出库表")
-    @GetMapping("/query/out")
-    public Result queryOut(){
-        return inAndOutService.queryOut();
+    @GetMapping("/query/out/{outNo}")
+    public Result queryOut(@PathVariable Integer outNo){
+        return inAndOutService.queryOut(outNo);
     }
 }

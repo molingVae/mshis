@@ -32,7 +32,7 @@ public class MedicinerController {
     @ApiOperation(value = "添加")
     @ApiImplicitParam(name = "persons",value = "就医人员")
     @PostMapping("/add")
-    public Result add(Persons persons){
+    public Result add(@RequestBody Persons persons){
         return medicinerService.add(persons);
 
     }
@@ -40,7 +40,7 @@ public class MedicinerController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "就医人员ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return medicinerService.delete(id);
     }
 
@@ -48,7 +48,7 @@ public class MedicinerController {
     @ApiOperation(value = "更新")
     @ApiImplicitParam(name = "persons",value = "就医人员")
     @PutMapping("/update")
-    public Result update(Persons persons){
+    public Result update(@RequestBody Persons persons){
         return medicinerService.update(persons);
 
     }

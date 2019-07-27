@@ -33,14 +33,14 @@ public class AuthorityController {
     @ApiImplicitParam(name = "userAuth",value = "用户权限")
     @PostMapping("/add")
     public Result add(@RequestBody UserAuth userAuth){
-        System.out.println(" 1111 userAuth"+userAuth.toString());
         return authorityService.add(userAuth);
+
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "用户权限ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return authorityService.delete(id);
     }
 
@@ -49,8 +49,8 @@ public class AuthorityController {
     @ApiImplicitParam(name = "userAuth",value = "用户权限")
     @PutMapping("/update")
     public Result update(@RequestBody UserAuth userAuth){
-        System.out.println(" 2222userAuth"+userAuth.toString());
         return authorityService.update(userAuth);
+
     }
 
 }

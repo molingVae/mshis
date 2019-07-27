@@ -20,4 +20,5 @@ public class PayMoney implements Serializable {
     private String money;  //预交款
     private String outFlag;    //出院否
     private Date outDate;  //出院日期
+    private String room;
 }

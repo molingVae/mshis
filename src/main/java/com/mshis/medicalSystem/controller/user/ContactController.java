@@ -33,7 +33,7 @@ public class ContactController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "diagnose",value = "疾病诊断国际（ICD-9）编码")
     @PostMapping("/add")
-    public Result add(FamilyMember familyMember){
+    public Result add(@RequestBody FamilyMember familyMember){
         return contactService.add(familyMember);
 
     }
@@ -41,7 +41,7 @@ public class ContactController {
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "疾病诊断国际（ICD-9）ID")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return contactService.delete(id);
     }
 }

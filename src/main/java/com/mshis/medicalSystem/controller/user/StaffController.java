@@ -33,15 +33,15 @@ public class StaffController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "personBase",value = "人事基本资料")
     @PostMapping("/add")
-    public Result add(PersonBase personBase){
-        System.out.println(personBase.toString());
+    public Result add(@RequestBody PersonBase personBase){
         return staffService.add(personBase);
+
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "职工编号")
     @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    public Result delete(@RequestBody Integer id){
         return staffService.delete(id);
     }
 }

@@ -1,5 +1,6 @@
 package com.mshis.medicalSystem.pojo.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,6 +21,7 @@ public class Uh03StoreIn implements Serializable {
     private String unit;              //   单位
     private Integer unitPrice;       //   单价
     private Integer quantity;         //   数量
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date inDate;             //   日期
     private String comNo;            //   供应商代号
     private String billNo;           //    发票号码

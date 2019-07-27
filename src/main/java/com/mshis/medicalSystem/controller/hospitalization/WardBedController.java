@@ -38,5 +38,14 @@ public class WardBedController {
         return wardBedService.addWardBed(ward);
     }
 
+    @ApiOperation("查询")
+    @ApiImplicitParam(name = "Ward",value = "查询所有床位")
+    @GetMapping("/bed/get")
+    public Result updateWardBed(){
+        return wardBedService.getAll();
+    }
+
+
+
 
 }

@@ -42,4 +42,10 @@ public class WardBedService {
         Result result  = new Result(Code.OK, "修改成功");
         return result;
     }
+
+    public Result getAll(){
+        Result result=new Result(Code.OK,"");
+        result.setData(wardBedDao.findAll());
+        return result;
+    }
 }

@@ -23,15 +23,20 @@ public class DepartmentController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "department",value = "部门编码")
     @PostMapping("/add")
-    public Result add(Department department){
+    public Result add(@RequestBody Department department){
         return departmentService.add(department);
 
     }
-
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "部门编码ID")
     @DeleteMapping("/delete")
     public Result delete(Integer id){
         return departmentService.delete(id);
+    }
+
+    @ApiOperation(value = "查询")
+    @GetMapping("/query")
+    public Result query(){
+        return departmentService.query();
     }
 }

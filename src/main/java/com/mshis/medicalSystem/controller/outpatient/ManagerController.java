@@ -27,22 +27,30 @@ public class ManagerController {
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "doctor",value = "医生科室")
     @PostMapping("/doctor/add")
-    public Result addDoctor(Doctor doctor){
+    public Result addDoctor(@RequestBody Doctor doctor){
         return managerService.addDoctor(doctor);
+
+    }
+
+    @ApiOperation(value = "查询")
+    @ApiImplicitParam(name = "doctor",value = "医生科室")
+    @GetMapping("/doctor/query")
+    public Result getDoctorAll(){
+        return managerService.findDoctorAll();
 
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "医生科室ID")
     @DeleteMapping("/doctor/delete")
-    public Result deleteDoctor(Integer id){
+    public Result deleteDoctor(@RequestBody Integer id){
         return managerService.deleteDoctor(id);
     }
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "checkStandard",value = "检查项目")
     @PostMapping("/outpatient/add")
-    public Result addCheckStandard(CheckStandard checkStandard){
+    public Result addCheckStandard(@RequestBody CheckStandard checkStandard){
         return managerService.addCheckStandard(checkStandard);
 
     }
@@ -54,6 +62,14 @@ public class ManagerController {
         return managerService.deleteCheckStandard(id);
     }
 
+
+    @ApiOperation(value = "查询")
+    @ApiImplicitParam(name = "id",value = "查询检查项目ID")
+    @GetMapping("/outpatient/query")
+    public Result getAllCheckStandard(){
+        return managerService.findAllCheck();
+    }
+
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "subject",value = "门诊科目")
     @PostMapping("/check/add")
@@ -61,6 +77,16 @@ public class ManagerController {
         return managerService.addSubject(subject);
 
     }
+
+    @ApiOperation(value = "查询门诊科目")
+    @ApiImplicitParam(name = "subject",value = "查询门诊科目")
+    @GetMapping("/check/query")
+    public Result getAll(){
+        return managerService.findSubjectAll();
+
+    }
+
+
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "门诊科目ID")

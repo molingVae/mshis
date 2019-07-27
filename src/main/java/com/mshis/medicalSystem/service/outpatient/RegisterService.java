@@ -21,7 +21,9 @@ public class RegisterService {
 
     public Result add(Register register) {
         registerDao.save(register);
-        return new Result(Code.OK,"添加成功");
+        Result result = new Result(Code.OK, "添加成功");
+        result.setData(register);
+        return result;
     }
 
 

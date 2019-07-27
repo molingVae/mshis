@@ -14,15 +14,10 @@ public class Uh03Price implements Serializable {
     private Integer mediNo;           //  药品代码
 
     private String specification;     //   规格
-
     private String unit;              //    单位
-
     private Integer unitPrice;       //    单价
-
     private String mediName;         //    品名
-
     private String quality;         //    性质
-
     private Integer storeLimit;       //     库存下限
 
 }

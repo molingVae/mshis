@@ -26,4 +26,8 @@ public class DepartmentService {
         departmentDao.deleteById(id);
         return new Result(Code.OK,"删除成功");
     }
+
+    public Result query() {
+        return new Result(Code.OK,"查询成功",departmentDao.findAll());
+    }
 }

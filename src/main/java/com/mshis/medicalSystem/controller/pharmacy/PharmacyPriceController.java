@@ -1,6 +1,7 @@
 package com.mshis.medicalSystem.controller.pharmacy;
 
 import com.mshis.medicalSystem.pojo.Result;
+import com.mshis.medicalSystem.pojo.bean.Diagnose;
 import com.mshis.medicalSystem.pojo.bean.Uh03Price;
 import com.mshis.medicalSystem.service.pharmacy.PharmacyPriceService;
 import io.swagger.annotations.Api;
@@ -22,23 +23,30 @@ public class PharmacyPriceController {
 
 
     @ApiOperation(value = "查询")
-    @GetMapping("/query")
-    public Result query(){
-        return uh03PriceService.query();
+    @PostMapping("/query/{page}/{size}")
+    public Result query(@RequestBody(required = false) Uh03Price uh03Price, @PathVariable int page, @PathVariable int size){
+        return uh03PriceService.query(uh03Price,page,size);
     }
 
     @ApiOperation(value = "录入")
     @ApiImplicitParam(name = "uh03Price",value = "调价")
     @PostMapping("/add")
-    public Result add(Uh03Price uh03Price){
+    public Result add(@RequestBody  Uh03Price uh03Price){
         return uh03PriceService.add(uh03Price);
 
     }
 
     @ApiOperation(value = "删除")
     @ApiImplicitParam(name = "id",value = "调价ID")
-    @DeleteMapping("/delete")
-    public Result delete(Integer id){
+    @GetMapping("/delete/{id}")
+    public Result delete(@PathVariable  Integer id){
         return uh03PriceService.delete(id);
+    }
+
+    @ApiOperation(value = "修改")
+    @ApiImplicitParam(name = "uh03Price",value = "调价")
+    @PostMapping("/update")
+    public Result save(@RequestBody  Uh03Price uh03Price){
+        return uh03PriceService.save(uh03Price);
     }
 }

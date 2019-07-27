@@ -50,8 +50,8 @@ public class PatientBaseController {
     @ApiOperation("删除")
     @ApiImplicitParam(name = "Id", value = "删除病人基本资料")
     @GetMapping("/delete/{id}")
-    public Result deletePatientBaseMessage(@PathVariable int Id){
-        return patientBaseService.deletePatientBase(Id);
+    public Result deletePatientBaseMessage(@PathVariable int id){
+        return patientBaseService.deletePatientBase(id);
     }
 
 

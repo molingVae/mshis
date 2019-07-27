@@ -26,7 +26,6 @@ public class PriceController {
     @ApiOperation(value = "查询")
     @GetMapping("/query")
     public Result query(){
-        System.out.println(priceService.query().toString());
         return priceService.query();
     }
 

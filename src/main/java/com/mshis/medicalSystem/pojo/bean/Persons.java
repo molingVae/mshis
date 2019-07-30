@@ -2,6 +2,7 @@ package com.mshis.medicalSystem.pojo.bean;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -26,7 +27,8 @@ public class Persons implements Serializable {
     private String contactAddress;  //地址
     private Date birthDate;    //出生日期
     private String married;    //婚否
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date registerDate;    //发证日期
     private String cardMark;    //补发医疗卡标记
 
